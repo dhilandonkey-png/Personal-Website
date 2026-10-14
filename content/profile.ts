@@ -96,6 +96,13 @@ export const experience: Role[] = [
   },
 ];
 
+export type Photo = {
+  src: string;
+  caption: string;
+  /** CSS object-position, for portraits that need the crop nudged up. */
+  position?: string;
+};
+
 export type Build = {
   name: string;
   stack: string[];
@@ -103,7 +110,7 @@ export type Build = {
   blurb: string;
   bullets: string[];
   /** Photo slots. Put files in public/images/ and set src; empty src shows a placeholder. */
-  photos: { src: string; caption: string }[];
+  photos: Photo[];
 };
 
 export const builds: Build[] = [
@@ -134,11 +141,30 @@ export const builds: Build[] = [
       "TXSEF Finalist; qualified through the Fort Worth Regional Science & Engineering Fair (FWRSEF)",
     ],
     photos: [
-      { src: "", caption: "the arm" },
-      { src: "", caption: "TXSEF" },
+      { src: "/images/robotic-arm/arm-demo.webp", caption: "the arm + glove", position: "50% 40%" },
+      { src: "/images/robotic-arm/poster.webp", caption: "at the fair", position: "50% 35%" },
     ],
   },
 ];
+
+/** Public repos shown under "on github". */
+export const repos = [
+  {
+    name: "Stemseeds-website",
+    description:
+      "Production site for my nonprofit. Next.js App Router with typed content files, SEO metadata and generated Open Graph images.",
+    stack: ["Next.js", "TypeScript", "Tailwind CSS"],
+    href: "https://github.com/dhilandonkey-png/Stemseeds-website",
+    live: "https://www.stemseeds.net",
+  },
+  {
+    name: "Personal-Website",
+    description:
+      "This site. The heart is one SVG whose viewBox glides between chambers as you scroll, and every ECG trace is generated in code.",
+    stack: ["Next.js", "TypeScript", "Motion"],
+    href: "https://github.com/dhilandonkey-png/Personal-Website",
+  },
+] as const;
 
 export const stemseeds = {
   title: "Co-Founder, CEO & Lead Engineer",
@@ -156,10 +182,10 @@ export const stemseeds = {
     "Secured partnerships with hospitals, clinics and libraries nationwide",
   ],
   photos: [
-    { src: "", caption: "kits" },
-    { src: "", caption: "deliveries" },
-    { src: "", caption: "the team" },
-  ],
+    { src: "/images/stemseeds/kits.avif", caption: "kits" },
+    { src: "/images/stemseeds/manuals.avif", caption: "packing" },
+    { src: "/images/stemseeds/delivery.avif", caption: "deliveries", position: "50% 30%" },
+  ] as Photo[],
 } as const;
 
 export const awards = [

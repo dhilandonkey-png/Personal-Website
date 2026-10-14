@@ -53,7 +53,13 @@ export function Stemseeds() {
         {photos.length > 0 ? (
           <div className={`${right} flex flex-wrap justify-center gap-4 py-4`}>
             {photos.map((p, j) => (
-              <Polaroid key={p.caption} src={p.src} caption={p.caption} tilt={[3, -4, 2][j % 3]} />
+              <Polaroid
+                key={p.caption}
+                src={p.src}
+                caption={p.caption}
+                position={p.position}
+                tilt={[3, -4, 2][j % 3]}
+              />
             ))}
           </div>
         ) : (
