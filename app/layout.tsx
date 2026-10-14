@@ -16,6 +16,8 @@ const jetbrains = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(profile.links.site),
+  alternates: { canonical: "/" },
   title: `${profile.name} | ${profile.roles.join(" · ")}`,
   description: profile.intro,
   authors: [{ name: profile.name }],
@@ -23,6 +25,8 @@ export const metadata: Metadata = {
     title: profile.name,
     description: profile.intro,
     type: "website",
+    url: profile.links.site,
+    siteName: profile.name,
   },
 };
 

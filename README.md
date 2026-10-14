@@ -2,6 +2,8 @@
 
 My personal site: research, projects, STEMSeeds and awards in one place.
 
+**Live at [dhilanavula.dev](https://dhilanavula.dev)**
+
 ![The hero: name, a terminal-style vitals card, and a heartbeat trace sweeping across the bottom](docs/hero.png)
 
 ## The idea

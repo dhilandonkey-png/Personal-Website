@@ -12,6 +12,7 @@ export const profile = {
   location: "Denton, TX",
   email: "dhilanavula@my.unt.edu",
   links: {
+    site: "https://dhilanavula.dev",
     github: "https://github.com/dhilandonkey-png",
     linkedin: "https://www.linkedin.com/in/dhilan-avula-bb9609404/",
     // Drop the exported PDF into public/ with this exact name.
