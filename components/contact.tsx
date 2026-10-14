@@ -16,7 +16,7 @@ export function Contact() {
   const [alive, setAlive] = useState(false);
 
   return (
-    <section id="contact" className="mx-auto max-w-6xl px-4 pt-20 pb-10 text-center sm:px-6">
+    <section id="contact" className="relative mx-auto max-w-6xl px-4 pt-24 pb-10 text-center sm:px-6">
       <p className="font-mono text-sm text-pulse">05 / contact</p>
       <h2 className="mt-2 text-4xl font-bold tracking-tight text-line sm:text-5xl">say hi</h2>
       <p className="mx-auto mt-3 max-w-xl text-lg text-muted">

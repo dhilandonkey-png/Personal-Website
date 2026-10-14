@@ -77,6 +77,15 @@ export const research: Role[] = [
 
 export const experience: Role[] = [
   {
+    // TODO: location, dates, student count and ages once Dhilan sends them.
+    title: "Robotics Instructor",
+    org: "iCode",
+    bullets: [
+      "Taught robotics to students in hands-on classes",
+      "Developing a new Minecraft-based coding curriculum and evaluating software platforms to deliver it",
+    ],
+  },
+  {
     title: "Credit Analyst Intern",
     org: "First United Bank",
     dates: "May 2026 – July 2026",
