@@ -288,6 +288,13 @@ export const stemseeds = {
     { src: "/images/stemseeds/manuals.avif", caption: "packing" },
     { src: "/images/stemseeds/reedy-cook-childrens.avif", caption: "Cook Children's", position: "55% 50%" },
   ] as Photo[],
+  /** Extra photos shown in a strip under the section. */
+  gallery: [
+    { src: "/images/stemseeds/finished-kits.avif", caption: "finished kits", position: "40% 50%" },
+    { src: "/images/stemseeds/pickleball.avif", caption: "pickleball fundraiser" },
+    { src: "/images/stemseeds/frisco-recognition.avif", caption: "Frisco recognition", position: "50% 40%" },
+    { src: "/images/stemseeds/mansfield-recognition.avif", caption: "Mansfield recognition", position: "50% 35%" },
+  ] as Photo[],
 } as const;
 
 // TODO: confirm years for ATLAS, FRC, DECA and BPA.

@@ -58,6 +58,18 @@ export function Stemseeds() {
           ))}
         </div>
       </div>
+
+      <div className="mt-14 flex flex-wrap justify-center gap-6">
+        {stemseeds.gallery.map((p, j) => (
+          <Polaroid
+            key={p.caption}
+            src={p.src}
+            caption={p.caption}
+            position={p.position}
+            tilt={[-3, 2, -2, 3][j % 4]}
+          />
+        ))}
+      </div>
     </section>
   );
 }
