@@ -54,7 +54,6 @@ export const research: Role[] = [
     org: "University of Pennsylvania & Adelaide University",
     // TODO: confirm start month (project notes say Sept. 2026, resume says May 2026).
     dates: "2026 – Present",
-    advisor: "Dr. Ryan Baker & Dr. Andrew Zamecnik",
     bullets: [
       "Proposed a research question, adopted by the team, testing whether context improves LLM labeling accuracy",
       "Evaluating 6 open-weight LLMs that score classroom transcripts across 19 sub-skills using Python and pandas",
@@ -77,12 +76,12 @@ export const research: Role[] = [
 
 export const experience: Role[] = [
   {
-    // TODO: location, dates, student count and ages once Dhilan sends them.
-    title: "Robotics Instructor",
-    org: "iCode",
+    title: "Coding & Robotics Instructor",
+    org: "iCode Providence Village",
+    dates: "Feb. 2026 – Present",
     bullets: [
-      "Taught robotics to students in hands-on classes",
-      "Developing a new Minecraft-based coding curriculum and evaluating software platforms to deliver it",
+      "Taught Java and robotics to 30+ students",
+      "Co-developing a Minecraft-based curriculum that teaches Python to students",
     ],
   },
   {
@@ -172,7 +171,7 @@ export const awards = [
   {
     name: "Women's Health Conference, Harvard Medical School",
     year: "2026",
-    detail: "Invited poster on mathematical models of cardiovascular disease.",
+    detail: "Invited poster on cardiovascular risk prediction models and women's health.",
   },
   {
     name: "TXSEF Finalist",
@@ -188,6 +187,7 @@ export const awards = [
 
 export const stack = [
   "C++",
+  "Java",
   "Python",
   "Swift",
   "SwiftUI",

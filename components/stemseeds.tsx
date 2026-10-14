@@ -6,6 +6,19 @@ import { profile, stemseeds } from "@/content/profile";
 import { left, right, sectionShell, sideGrid } from "@/lib/layout";
 
 export function Stemseeds() {
+  const photos = stemseeds.photos.filter((p) => p.src);
+
+  const stats = (
+    <dl className="grid grid-cols-2 gap-3">
+      {stemseeds.stats.map((s) => (
+        <div key={s.label} className="rounded-lg border border-border bg-screen p-4">
+          <dt className="font-mono text-xs text-muted">{s.label}</dt>
+          <dd className="mt-1 text-2xl font-bold text-line">{s.value}</dd>
+        </div>
+      ))}
+    </dl>
+  );
+
   return (
     <section id="stemseeds" className={sectionShell}>
       <SectionHeading
@@ -19,14 +32,7 @@ export function Stemseeds() {
             <h3 className="text-xl font-semibold text-ink">{stemseeds.title}</h3>
             <span className="font-mono text-xs text-muted">{stemseeds.dates}</span>
           </div>
-          <dl className="mt-6 grid grid-cols-2 gap-3">
-            {stemseeds.stats.map((s) => (
-              <div key={s.label} className="rounded-lg border border-border bg-screen p-4">
-                <dt className="font-mono text-xs text-muted">{s.label}</dt>
-                <dd className="mt-1 text-2xl font-bold text-line">{s.value}</dd>
-              </div>
-            ))}
-          </dl>
+          {photos.length > 0 && <div className="mt-6">{stats}</div>}
           <ul className="mt-6 space-y-2 text-sm leading-6 text-muted">
             {stemseeds.bullets.map((b) => (
               <li key={b} className="flex gap-3">
@@ -44,11 +50,15 @@ export function Stemseeds() {
             stemseeds.net <ArrowUpRight className="size-4" aria-hidden="true" />
           </a>
         </div>
-        <div className={`${right} flex flex-wrap justify-center gap-4 py-4`}>
-          {stemseeds.photos.map((p, j) => (
-            <Polaroid key={p.caption} src={p.src} caption={p.caption} tilt={[3, -4, 2][j % 3]} />
-          ))}
-        </div>
+        {photos.length > 0 ? (
+          <div className={`${right} flex flex-wrap justify-center gap-4 py-4`}>
+            {photos.map((p, j) => (
+              <Polaroid key={p.caption} src={p.src} caption={p.caption} tilt={[3, -4, 2][j % 3]} />
+            ))}
+          </div>
+        ) : (
+          <div className={`${right} rounded-xl border border-border bg-panel/95 p-6`}>{stats}</div>
+        )}
       </div>
     </section>
   );
