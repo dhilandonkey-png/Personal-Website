@@ -44,7 +44,7 @@ export function Nav() {
           <a href={profile.links.resume} target="_blank" rel="noreferrer" className={iconLink} aria-label="Resume (PDF)">
             <FileText className="size-5" />
           </a>
-          <a href={`mailto:${profile.email}`} className={iconLink} aria-label="Email">
+          <a href="#contact" className={iconLink} aria-label="Contact">
             <Mail className="size-5" />
           </a>
         </div>

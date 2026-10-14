@@ -3,6 +3,7 @@
 import { motion } from "motion/react";
 import { useState } from "react";
 
+import { CopyEmail } from "@/components/copy-email";
 import { profile } from "@/content/profile";
 import { ecgPath, flatlinePath } from "@/lib/ecg";
 
@@ -36,16 +37,19 @@ export function Contact() {
         />
       </svg>
 
-      <a
-        href={`mailto:${profile.email}`}
-        onMouseEnter={() => setAlive(true)}
-        onMouseLeave={() => setAlive(false)}
-        onFocus={() => setAlive(true)}
-        onBlur={() => setAlive(false)}
-        className="mt-6 inline-block rounded-lg border border-line px-6 py-3 font-mono text-line transition hover:bg-line hover:text-screen"
-      >
-        {profile.email}
-      </a>
+      <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
+        <a
+          href={`mailto:${profile.email}`}
+          onMouseEnter={() => setAlive(true)}
+          onMouseLeave={() => setAlive(false)}
+          onFocus={() => setAlive(true)}
+          onBlur={() => setAlive(false)}
+          className="inline-block rounded-lg border border-line px-6 py-3 font-mono text-line transition hover:bg-line hover:text-screen"
+        >
+          {profile.email}
+        </a>
+        <CopyEmail email={profile.email} />
+      </div>
 
       <p className="mt-16 font-mono text-xs text-muted">
         © {new Date().getFullYear()} {profile.name} · built with Next.js
