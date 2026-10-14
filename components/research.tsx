@@ -8,7 +8,7 @@ export function Research() {
       <SectionHeading
         index="01 / research"
         title="the lab"
-        subtitle="Reinforcement learning at UT Austin and LLM evaluation with Penn and Adelaide."
+        subtitle="Reinforcement learning at UT Austin, LLM evaluation with Penn and Adelaide, organoids at UNT, and finance at UT Arlington."
       />
       <div className="grid gap-6 lg:grid-cols-2">
         {research.map((r) => (

@@ -5,7 +5,7 @@ export function Awards() {
   return (
     <section id="awards" className="py-20">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        <SectionHeading index="04 / awards" title="the readings" subtitle="Competitions, talks and events." />
+        <SectionHeading index="04 / awards" title="the record" subtitle="Competitions, talks and events." />
         <ol className="divide-y divide-border rounded-xl border border-border bg-panel">
           {awards.map((a) => (
             <li key={a.name} className="grid gap-1 p-5 sm:grid-cols-[5rem_1fr] sm:gap-6">

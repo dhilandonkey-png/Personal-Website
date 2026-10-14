@@ -32,7 +32,7 @@ export const vitals = [
 export type Role = {
   title: string;
   org: string;
-  dates: string;
+  dates?: string;
   advisor?: string;
   bullets: string[];
 };
@@ -60,6 +60,18 @@ export const research: Role[] = [
       "Evaluating 6 open-weight LLMs that score classroom transcripts across 19 sub-skills using Python and pandas",
       "Analyzing 16,800+ model outputs across two architectures, served on AWS EC2 GPUs and shared via GitHub",
     ],
+  },
+  {
+    // TODO: title, dates, lab/PI and bullets once Dhilan sends details.
+    title: "Biomedical Research, Organoids",
+    org: "University of North Texas",
+    bullets: [],
+  },
+  {
+    // TODO: title, dates, lab/PI and bullets once Dhilan sends details.
+    title: "Finance Research",
+    org: "University of Texas at Arlington",
+    bullets: [],
   },
 ];
 
