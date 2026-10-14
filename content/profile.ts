@@ -207,18 +207,18 @@ export const builds: Build[] = [
     photos: [],
   },
   {
-    name: "Kalshi Prediction Market Bot",
-    status: "ongoing",
+    name: "Kalshi Prediction Market Case Study",
+    status: "completed",
     // TODO: dates.
-    stack: ["Kelly criterion", "Brier score"],
-    dates: "In progress",
+    stack: ["Kelly criterion", "Brier score", "Probability modeling"],
+    dates: "Case study",
     blurb: "Mathematical modeling of prediction markets.",
     summary:
-      "Kalshi lets people trade on the outcomes of real events, so every price is the market's probability estimate. I'm building a bot that forms its own probability for each market, sizes positions with the Kelly criterion so a bet is only as big as its edge justifies, and grades its own forecasts with Brier scores to check whether its probabilities are actually calibrated.",
+      "On Kalshi, people trade contracts on whether real events will happen, so every price doubles as the market's probability for that event. This case study treats those markets as a math problem with two questions. How much should you bet when your probability differs from the market's? The Kelly criterion answers that by sizing each position to the size of the edge, and betting nothing when there is none. And how do you know your probabilities were any good? Brier scores measure how well-calibrated a set of forecasts turned out to be.",
     bullets: [
-      "Kelly criterion position sizing, so position size follows the estimated edge",
-      "Brier score calibration to measure how trustworthy the bot's probabilities are",
-      "Written up as a case study in modeling prediction markets",
+      "Modeled market prices as implied probabilities",
+      "Applied Kelly criterion sizing so position size scales with the estimated edge",
+      "Used Brier scores to evaluate how well-calibrated the probability forecasts were",
     ],
     photos: [],
   },

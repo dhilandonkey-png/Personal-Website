@@ -16,7 +16,7 @@ export function Builds() {
       <SectionHeading
         index="02 / builds"
         title="the bench"
-        subtitle="Things I've built, from an app for heart transplant patients to a bot that trades on probabilities."
+        subtitle="Things I've built, from an app for heart transplant patients to the math behind prediction markets."
       />
       <div className="space-y-20">
         {builds.map((b, i) => {
