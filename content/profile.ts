@@ -305,6 +305,11 @@ export const awards: { name: string; year?: string; detail: string }[] = [
     detail: "Promoted from Bronze to Platinum, the highest division, in my first contest. C++.",
   },
   {
+    // TODO: year.
+    name: "Harvard-MIT Mathematics Tournament (HMMT)",
+    detail: "Competed at one of the largest and most competitive high school math tournaments in the country.",
+  },
+  {
     name: "Women's Health Conference, Harvard Medical School",
     year: "2026",
     detail: 'Invited to present the "Invisible Risks" poster on cardiovascular risk models and women.',
