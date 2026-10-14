@@ -17,7 +17,7 @@ export function Research() {
       </div>
 
       <h3 className="mt-16 mb-6 font-mono text-sm text-pulse">posters & talks</h3>
-      <div className="grid gap-6 lg:grid-cols-2">
+      <div className="grid items-start gap-6 lg:grid-cols-2">
         {presentations.map((r) => (
           <RoleCard key={r.title} role={r} />
         ))}

@@ -24,7 +24,7 @@ export const profile = {
 export const vitals = [
   { key: "researching", value: "reinforcement learning @ UT Austin" },
   { key: "evaluating", value: "open-weight LLMs @ Penn × Adelaide" },
-  { key: "growing", value: "organoids @ UNT Yang Lab" },
+  { key: "growing", value: "organoids @ UNT biomedical eng." },
   { key: "matching", value: "bank records @ UT Arlington" },
   { key: "rank", value: "USACO Platinum" },
   { key: "shipped", value: "MyHeartJourney → 50+ patients" },
@@ -53,11 +53,11 @@ export type Role = {
 export const research: Role[] = [
   {
     title: "Reinforcement Learning for Scientific Computing",
-    org: "University of Texas at Austin · Bajaj Lab",
+    org: "University of Texas at Austin",
     dates: "Aug. 2026 – Present",
     status: "ongoing",
     summary:
-      "Most reinforcement learning needs huge amounts of trial and error, which is a problem when every trial is an expensive physics simulation. Dr. Chandrajit Bajaj's lab built dfPO (NeurIPS 2025), which reframes RL as a continuous-time control problem so a physics prior is built into the learning itself. I'm reproducing it from the paper's code and benchmarking it against 12 standard RL algorithms, like PPO, SAC and TRPO.",
+      "Most reinforcement learning needs huge amounts of trial and error, which is a problem when every trial is an expensive physics simulation. The lab built dfPO (NeurIPS 2025), which reframes RL as a continuous-time control problem so a physics prior is built into the learning itself. I'm reproducing it from the paper's code and benchmarking it against 12 standard RL algorithms, like PPO, SAC and TRPO.",
     bullets: [
       "Getting dfPO and 12 Stable-Baselines3 baselines running in Python",
       "Running benchmarks on 3 scientific tasks: surface modeling, grid-based PDE control and molecular dynamics",
@@ -80,11 +80,11 @@ export const research: Role[] = [
   },
   {
     title: "Biomedical Engineering Research",
-    org: "University of North Texas · Yang Lab",
-    // TODO: dates, and a photo once Dhilan sends one.
+    org: "University of North Texas · Biomedical Engineering",
+    // TODO: dates.
     status: "ongoing",
     summary:
-      "Organoids are small 3D clusters of cells grown in the lab that behave like a simplified version of a real organ, so researchers can study disease and drug effects without using patients. In Dr. Adam Yang's lab I help prepare organoids for the lab's cardiovascular experiments.",
+      "Organoids are small 3D clusters of cells grown in the lab that behave like a simplified version of a real organ, so researchers can study disease and drug effects without using patients. I help prepare organoids for the lab's cardiovascular experiments.",
     bullets: [
       "Help prepare organoids for experiments alongside the lab's graduate researchers",
       "Learning wet-lab technique and how tissue models connect to the cardiovascular modeling I do on the computational side",
@@ -126,10 +126,12 @@ export const presentations: Role[] = [
     dates: "Oct. 1, 2026",
     status: "presented",
     summary:
-      "An invited poster reviewing 28 studies on why cardiovascular risk prediction models underserve women, and what that means for the patients those models are used on.",
-    bullets: [],
-    // TODO: add the Harvard presenting photo.
-    photos: [],
+      "Most heart disease risk models are built on clinical numbers like blood pressure and cholesterol, and they often miss the socioeconomic and psychosocial factors that shape women's risk. With four other ATLAS scholars (equal contributors), I searched PubMed, Scopus and Embase, screened 2,770 records down to 28 studies, and compared how well current models predict risk for women.",
+    bullets: [
+      "Systematic review: 2,770 records screened, 28 studies included",
+      "Compared discrimination and calibration of conventional scores against models adding biomarker, socioeconomic and psychosocial data",
+    ],
+    photos: [{ src: "/images/presentations/harvard-poster.webp", caption: "presenting at Harvard", position: "70% 30%" }],
   },
   {
     title: "Comparing Cardiovascular Risk Prediction Models",
@@ -154,12 +156,15 @@ export const experience: Role[] = [
     ],
   },
   {
-    // TODO: role on the team and season.
-    title: "Team Member",
+    // TODO: season.
+    title: "Mechanical Engineering Lead",
     org: "FIRST Robotics Competition · Mercenary Robotics 6369",
     summary:
-      "A competitive high school robotics team that designs, builds and programs a new robot every season.",
-    bullets: ["Ranked 6th of 188 teams and qualified for the FIRST World Championship"],
+      "A competitive high school robotics team that designs, builds and programs a new robot every season. I led the mechanical side, from design to build.",
+    bullets: [
+      "Led the team's mechanical engineering",
+      "Ranked 6th of 188 teams and qualified for the FIRST World Championship",
+    ],
   },
   {
     title: "Credit Analyst Intern",
@@ -204,7 +209,7 @@ export const builds: Build[] = [
   {
     name: "Kalshi Prediction Market Bot",
     status: "ongoing",
-    // TODO: stack, dates and a repo link once it's public.
+    // TODO: dates.
     stack: ["Kelly criterion", "Brier score"],
     dates: "In progress",
     blurb: "Mathematical modeling of prediction markets.",
