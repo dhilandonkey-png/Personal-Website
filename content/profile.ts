@@ -26,7 +26,7 @@ export const vitals = [
   { key: "growing", value: "organoids @ UNT biomedical eng." },
   { key: "matching", value: "bank records @ UT Arlington" },
   { key: "rank", value: "USACO Platinum" },
-  { key: "shipped", value: "MyHeartJourney → 50+ patients" },
+  { key: "co-built", value: "MyHeartJourney → 50+ patients" },
 ] as const;
 
 export type Photo = {
@@ -195,12 +195,12 @@ export const builds: Build[] = [
     name: "MyHeartJourney",
     stack: ["Swift", "SwiftUI"],
     dates: "July 2025 – Aug. 2026",
-    blurb: "An iOS app for heart transplant recovery.",
+    blurb: "An iOS app for heart transplant recovery, built with my brother.",
     summary:
-      "Recovering from a heart transplant means tracking vitals, symptoms and a long list of medications every single day. I built MyHeartJourney so patients could log all of it in one place and see how they were trending over time. Before adding the medication tools and educational modules, I talked with cardiologists and went through transplant-center patient education guidelines so the content was right. It ran on the App Store for about a year.",
+      "Recovering from a heart transplant means tracking vitals, symptoms and a long list of medications every single day. My brother and I built MyHeartJourney together so patients could log all of it in one place and see how they were trending over time, with data stored in iCloud. I built the app's interface in SwiftUI and tested it on my own iPhone. Before adding the medication tools and educational modules, we talked with cardiologists and went through transplant-center patient education guidelines so the content was right. It ran on the App Store for about a year.",
     bullets: [
-      "Built in SwiftUI: vitals logging, symptom tracking and trend charts",
-      "Medication tools and educational modules shaped by cardiologist feedback",
+      "Co-built with my brother; I developed the SwiftUI interface: vitals logging, symptom tracking and trend charts",
+      "Medication tools and educational modules shaped by cardiologist input",
       "50+ monthly active patients and 1,500+ App Store impressions",
     ],
     photos: [],
