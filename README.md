@@ -72,7 +72,6 @@ the site usually means editing that one file.
 - **Add a photo:** put it in `public/images/` and add `{ src, caption }` to the
   `photos` list of the project. `position` (CSS `object-position`) nudges the crop
   for portrait shots.
-- **Resume:** the resume button links to `public/Dhilan_Avula_Resume.pdf`.
 
 ## Run it locally
 

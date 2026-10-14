@@ -15,8 +15,6 @@ export const profile = {
     site: "https://dhilanavula.dev",
     github: "https://github.com/dhilandonkey-png",
     linkedin: "https://www.linkedin.com/in/dhilan-avula-bb9609404/",
-    // Drop the exported PDF into public/ with this exact name.
-    resume: "/Dhilan_Avula_Resume.pdf",
     stemseeds: "https://www.stemseeds.net",
   },
 } as const;

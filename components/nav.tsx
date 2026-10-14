@@ -1,4 +1,4 @@
-import { FileText, Heart, Mail } from "lucide-react";
+import { Heart, Mail } from "lucide-react";
 
 import { GitHubIcon, LinkedInIcon } from "@/components/icons";
 import { profile } from "@/content/profile";
@@ -40,9 +40,6 @@ export function Nav() {
           </a>
           <a href={profile.links.linkedin} target="_blank" rel="noreferrer" className={iconLink} aria-label="LinkedIn">
             <LinkedInIcon className="size-5" />
-          </a>
-          <a href={profile.links.resume} target="_blank" rel="noreferrer" className={iconLink} aria-label="Resume (PDF)">
-            <FileText className="size-5" />
           </a>
           <a href="#contact" className={iconLink} aria-label="Contact">
             <Mail className="size-5" />
