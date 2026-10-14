@@ -8,6 +8,7 @@ const sections = [
   { label: "Builds", href: "#builds" },
   { label: "STEMSeeds", href: "#stemseeds" },
   { label: "Awards", href: "#awards" },
+  { label: "About", href: "#about" },
   { label: "Contact", href: "#contact" },
 ];
 

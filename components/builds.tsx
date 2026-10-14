@@ -1,33 +1,35 @@
-import { Polaroid } from "@/components/polaroid";
-import { SectionHeading } from "@/components/section-heading";
-import { TremorDemo } from "@/components/tremor-demo";
 import { ArrowUpRight } from "lucide-react";
 
+import { Bullets } from "@/components/bullets";
 import { GitHubIcon } from "@/components/icons";
+import { Polaroid } from "@/components/polaroid";
+import { SectionHeading } from "@/components/section-heading";
+import { StatusTag } from "@/components/status-tag";
+import { TremorDemo } from "@/components/tremor-demo";
 import { builds, repos } from "@/content/profile";
-import { left, right, sectionShell, sideGrid } from "@/lib/layout";
 
 const tilts = [-4, 3, -2, 5];
 
 export function Builds() {
   return (
-    <section id="builds" className={sectionShell}>
+    <section id="builds" className="mx-auto max-w-6xl px-4 py-20 sm:px-6">
       <SectionHeading
         index="02 / builds"
         title="the bench"
-        subtitle="Things I've built that read signals from people and respond to them."
+        subtitle="Things I've built, from an app for heart transplant patients to a bot that trades on probabilities."
       />
-      <div className="space-y-24">
+      <div className="space-y-20">
         {builds.map((b, i) => {
           const photos = b.photos.filter((p) => p.src);
-          // Without photos, alternate the card between sides so the heart stays visible.
-          const cardSide = photos.length > 0 || i % 2 === 0 ? left : right;
           return (
-            <article key={b.name} className={`${sideGrid} items-center`}>
-              <div className={`${cardSide} rounded-xl border border-border bg-panel/95 p-6`}>
-                <p className="font-mono text-xs text-muted">{b.dates}</p>
-                <h3 className="mt-2 text-2xl font-bold text-ink">{b.name}</h3>
-                <p className="mt-2 text-pulse">{b.blurb}</p>
+            <article key={b.name} className={`grid items-center gap-10 ${photos.length > 0 ? "lg:grid-cols-2" : ""}`}>
+              <div className={i % 2 === 1 && photos.length > 0 ? "lg:order-2" : undefined}>
+                <div className="flex flex-wrap items-center gap-3">
+                  <p className="font-mono text-xs text-muted">{b.dates}</p>
+                  {b.status && <StatusTag status={b.status} />}
+                </div>
+                <h3 className="mt-2 text-3xl font-bold text-ink">{b.name}</h3>
+                <p className="mt-2 text-lg text-pulse">{b.blurb}</p>
                 <div className="mt-4 flex flex-wrap gap-2">
                   {b.stack.map((s) => (
                     <span key={s} className="rounded border border-line-dim px-2 py-0.5 font-mono text-xs text-line">
@@ -35,14 +37,8 @@ export function Builds() {
                     </span>
                   ))}
                 </div>
-                <ul className="mt-5 space-y-2 text-sm leading-6 text-muted">
-                  {b.bullets.map((bullet) => (
-                    <li key={bullet} className="flex gap-3">
-                      <span className="mt-2.5 h-px w-3 shrink-0 bg-pulse" aria-hidden="true" />
-                      <span>{bullet}</span>
-                    </li>
-                  ))}
-                </ul>
+                <p className="mt-5 max-w-3xl leading-7 text-ink/85">{b.summary}</p>
+                <Bullets items={b.bullets} className="mt-5" />
                 {b.name.includes("Robotic Arm") && (
                   <div className="mt-6">
                     <TremorDemo />
@@ -50,7 +46,7 @@ export function Builds() {
                 )}
               </div>
               {photos.length > 0 && (
-                <div className={`${right} flex flex-wrap justify-center gap-4 py-4`}>
+                <div className="flex flex-wrap justify-center gap-4 py-4">
                   {photos.map((p, j) => (
                     <Polaroid
                       key={p.caption}
@@ -67,12 +63,12 @@ export function Builds() {
         })}
       </div>
 
-      <h3 className="mt-24 mb-6 font-mono text-sm text-pulse">on github</h3>
-      <div className={sideGrid}>
-        {repos.map((r, i) => (
+      <h3 className="mt-20 mb-6 font-mono text-sm text-pulse">on github</h3>
+      <div className="grid gap-6 lg:grid-cols-2">
+        {repos.map((r) => (
           <article
             key={r.name}
-            className={`${i % 2 === 0 ? left : right} rounded-xl border border-border bg-panel/95 p-6 transition hover:border-line-dim`}
+            className="rounded-xl border border-border bg-panel p-6 transition hover:border-line-dim"
           >
             <a
               href={r.href}
