@@ -286,7 +286,7 @@ export const stemseeds = {
   photos: [
     { src: "/images/stemseeds/kits.avif", caption: "kits" },
     { src: "/images/stemseeds/manuals.avif", caption: "packing" },
-    { src: "/images/stemseeds/delivery.avif", caption: "deliveries", position: "50% 30%" },
+    { src: "/images/stemseeds/reedy-cook-childrens.avif", caption: "Cook Children's", position: "55% 50%" },
   ] as Photo[],
 } as const;
 

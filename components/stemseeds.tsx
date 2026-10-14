@@ -10,7 +10,7 @@ export function Stemseeds() {
     <section id="stemseeds" className="mx-auto max-w-6xl px-4 py-20 sm:px-6">
       <SectionHeading
         index="03 / stemseeds"
-        title="the seeds"
+        title="STEMSeeds"
         subtitle="A student-led 501(c)(3) that ships hands-on STEM kits to kids in hospitals and underserved communities."
       />
       <div className="grid items-center gap-10 lg:grid-cols-2">
