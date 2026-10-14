@@ -25,6 +25,7 @@ export const vitals = [
   { key: "researching", value: "reinforcement learning @ UT Austin" },
   { key: "evaluating", value: "open-weight LLMs @ Penn × Adelaide" },
   { key: "growing", value: "organoids @ UNT Yang Lab" },
+  { key: "matching", value: "bank records @ UT Arlington" },
   { key: "rank", value: "USACO Platinum" },
   { key: "shipped", value: "MyHeartJourney → 50+ patients" },
 ] as const;
@@ -90,12 +91,30 @@ export const research: Role[] = [
     ],
   },
   {
-    // TODO: what this project is, the professor, dates.
-    title: "Finance Research",
-    org: "University of Texas at Arlington",
+    title: "Empirical Banking Research",
+    org: "UT Arlington College of Business & UF Warrington College of Business",
+    dates: "May 2026 – Present",
     status: "ongoing",
-    summary: "Quantitative finance research at UT Arlington. A full write-up is coming soon.",
-    bullets: [],
+    summary:
+      "Banking research often has to combine datasets from several sources, and the same bank or company can show up under different names, spellings and IDs in each one. Entity resolution is the work of figuring out which records are actually the same entity. I do that matching across large multi-source financial datasets for a finance professor's empirical banking study, then verify the matches so the classifications the paper relies on are accurate.",
+    bullets: [
+      "Entity resolution across large, multi-source financial datasets",
+      "Verified matches to improve classification accuracy before analysis",
+      "Prepared data with a graduate collaborator for a paper and a fall presentation at UT Arlington",
+    ],
+  },
+  {
+    title: "Cardiovascular Disease Prediction Research",
+    org: "ATLAS Research Scholars",
+    dates: "Oct. 2025 – Present",
+    status: "ongoing",
+    summary:
+      "Heart disease risk calculators mostly rely on standard clinical numbers like blood pressure and cholesterol. I was selected for ATLAS through an interview and developed my own question: do factors outside that list, like psychosocial stress, socioeconomic status and inflammation biomarkers, make cardiovascular disease prediction models more accurate? I'm now writing it up as a paper.",
+    bullets: [
+      "Developed the research question and compared published cardiovascular risk prediction models",
+      "Presented at MAA MathFest and Harvard Medical School's Women's Health Conference",
+      "Preparing a paper for undergraduate and high school research conferences",
+    ],
   },
 ];
 
@@ -115,9 +134,9 @@ export const presentations: Role[] = [
   {
     title: "Comparing Cardiovascular Risk Prediction Models",
     org: "MAA MathFest, Boston",
-    status: "accepted",
+    status: "presented",
     summary:
-      "Accepted to present a poster from the ATLAS Research Scholars program: a quantitative comparison of about 40 cardiovascular disease risk prediction studies.",
+      "A poster from my ATLAS research at MathFest's undergraduate research conference: a quantitative comparison of about 40 cardiovascular disease risk prediction studies.",
     bullets: [],
   },
 ];
@@ -281,11 +300,12 @@ export const awards: { name: string; year?: string; detail: string }[] = [
   {
     name: "MAA MathFest",
     year: "2026",
-    detail: "Poster accepted: a quantitative comparison of about 40 cardiovascular risk prediction studies.",
+    detail: "Presented a poster comparing about 40 cardiovascular risk prediction studies.",
   },
   {
     name: "ATLAS Research Scholars",
-    detail: "Selective research program, about an 8% admit rate.",
+    year: "2025",
+    detail: "Selected for the research program through an interview.",
   },
   {
     name: "TXSEF Finalist",

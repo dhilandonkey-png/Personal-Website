@@ -8,7 +8,7 @@ export function Research() {
       <SectionHeading
         index="01 / research"
         title="the lab"
-        subtitle="Reinforcement learning, LLM evaluation, biomedical engineering and finance, at UT Austin, Penn, Adelaide, UNT and UT Arlington."
+        subtitle="Reinforcement learning, LLM evaluation, biomedical engineering, banking data and cardiovascular risk models."
       />
       <div className="grid items-start gap-6 lg:grid-cols-2">
         {research.map((r) => (
