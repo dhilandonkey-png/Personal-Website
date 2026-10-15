@@ -117,6 +117,34 @@ export const research: Role[] = [
   },
 ];
 
+/** Photo cards shown right under the hero. */
+export const highlights = [
+  {
+    src: "/images/presentations/harvard-poster.webp",
+    position: "70% 30%",
+    tag: "Harvard Medical School · presented",
+    title: "Invisible Risks",
+    line: "A systematic review of 2,770 records on how heart disease risk models miss women's risk.",
+    href: "#talks",
+  },
+  {
+    src: "/images/robotic-arm/arm-demo.webp",
+    position: "50% 40%",
+    tag: "TXSEF finalist · built solo",
+    title: "Robotic arm for Parkinson's tremors",
+    line: "A sensor glove and a model I trained that separate intended movement from tremor.",
+    href: "#robotic-arm",
+  },
+  {
+    src: "/images/robotic-arm/poster.webp",
+    position: "50% 35%",
+    tag: "Science fair · presenting",
+    title: "Presenting the arm",
+    line: "It qualified through the Fort Worth regional fair and made TXSEF as a finalist.",
+    href: "#robotic-arm",
+  },
+];
+
 /** Posters and talks. */
 export const presentations: Role[] = [
   {
@@ -192,6 +220,23 @@ export type Build = {
 
 export const builds: Build[] = [
   {
+    name: "AI-Assisted Robotic Arm for Parkinson's Tremors",
+    stack: ["Arduino", "C++", "Python"],
+    dates: "Nov. 2024 – Mar. 2025",
+    blurb: "A glove that reads tremors and an arm that steadies them.",
+    summary:
+      "Parkinson's affects more than 10 million people, and tremors make everyday things like eating and writing hard. I designed a wearable glove with flex sensors and an MPU6050 accelerometer that tracks motion in X, Y and Z. An Arduino Nano reads the sensors, a model I trained separates intended movement from tremor, and an HC-05 Bluetooth module sends the result to a servo-driven robotic arm that follows the intended motion and compensates for the tremor. I built it on my own at home and kept redesigning it based on how it measured in testing.",
+    bullets: [
+      "Glove: flex sensors + MPU6050 accelerometer, read by an Arduino Nano",
+      "Trained an ML model on the sensor data to tell voluntary movement from tremor",
+      "TXSEF Finalist, after qualifying through the Fort Worth Regional Science & Engineering Fair",
+    ],
+    photos: [
+      { src: "/images/robotic-arm/arm-demo.webp", caption: "the arm + glove", position: "50% 40%" },
+      { src: "/images/robotic-arm/poster.webp", caption: "at the fair", position: "50% 35%" },
+    ],
+  },
+  {
     name: "MyHeartJourney",
     stack: ["Swift", "SwiftUI"],
     dates: "July 2025 – Aug. 2026",
@@ -220,23 +265,6 @@ export const builds: Build[] = [
       "Used Brier scores to evaluate how well-calibrated the probability forecasts were",
     ],
     photos: [],
-  },
-  {
-    name: "AI-Assisted Robotic Arm for Parkinson's Tremors",
-    stack: ["Arduino", "C++", "Python"],
-    dates: "Nov. 2024 – Mar. 2025",
-    blurb: "A glove that reads tremors and an arm that steadies them.",
-    summary:
-      "Parkinson's affects more than 10 million people, and tremors make everyday things like eating and writing hard. I designed a wearable glove with flex sensors and an MPU6050 accelerometer that tracks motion in X, Y and Z. An Arduino Nano reads the sensors, a model I trained separates intended movement from tremor, and an HC-05 Bluetooth module sends the result to a servo-driven robotic arm that follows the intended motion and compensates for the tremor. I built it on my own at home and kept redesigning it based on how it measured in testing.",
-    bullets: [
-      "Glove: flex sensors + MPU6050 accelerometer, read by an Arduino Nano",
-      "Trained an ML model on the sensor data to tell voluntary movement from tremor",
-      "TXSEF Finalist, after qualifying through the Fort Worth Regional Science & Engineering Fair",
-    ],
-    photos: [
-      { src: "/images/robotic-arm/arm-demo.webp", caption: "the arm + glove", position: "50% 40%" },
-      { src: "/images/robotic-arm/poster.webp", caption: "at the fair", position: "50% 35%" },
-    ],
   },
 ];
 

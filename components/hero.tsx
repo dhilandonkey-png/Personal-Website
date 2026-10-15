@@ -29,7 +29,7 @@ export function Hero() {
         </div>
       </div>
 
-      <div className="relative mx-auto grid min-h-[calc(100svh-4rem)] max-w-6xl items-center gap-12 px-4 pt-16 pb-44 sm:px-6 lg:grid-cols-[1.2fr_1fr]">
+      <div className="relative mx-auto grid max-w-6xl items-center gap-12 px-4 pt-14 pb-40 lg:pt-20 sm:px-6 lg:grid-cols-[1.2fr_1fr]">
         <div>
           <p className="font-mono text-sm text-line">{profile.location}</p>
           <h1 className="mt-3 text-5xl font-bold tracking-tight text-ink sm:text-7xl">{profile.name}</h1>
@@ -59,8 +59,8 @@ export function Hero() {
       </div>
 
       <a
-        href="#research"
-        aria-label="Scroll to research"
+        href="#highlights"
+        aria-label="Scroll to highlights"
         className="absolute bottom-6 left-1/2 -translate-x-1/2 text-line transition hover:translate-y-1"
       >
         <ArrowDown className="size-6" />

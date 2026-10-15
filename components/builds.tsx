@@ -22,8 +22,16 @@ export function Builds() {
         {builds.map((b, i) => {
           const photos = b.photos.filter((p) => p.src);
           return (
-            <article key={b.name} className={`grid items-center gap-10 ${photos.length > 0 ? "lg:grid-cols-2" : ""}`}>
-              <div className={i % 2 === 1 && photos.length > 0 ? "lg:order-2" : undefined}>
+            <article
+              key={b.name}
+              id={b.name.includes("Robotic Arm") ? "robotic-arm" : undefined}
+              className={`grid items-center gap-10 ${photos.length > 0 ? "lg:grid-cols-2" : ""}`}
+            >
+              <div
+                className={
+                  i % 2 === 1 && photos.length > 0 ? "lg:order-2" : undefined
+                }
+              >
                 <div className="flex flex-wrap items-center gap-3">
                   <p className="font-mono text-xs text-muted">{b.dates}</p>
                   {b.status && <StatusTag status={b.status} />}
@@ -32,12 +40,17 @@ export function Builds() {
                 <p className="mt-2 text-lg text-pulse">{b.blurb}</p>
                 <div className="mt-4 flex flex-wrap gap-2">
                   {b.stack.map((s) => (
-                    <span key={s} className="rounded border border-line-dim px-2 py-0.5 font-mono text-xs text-line">
+                    <span
+                      key={s}
+                      className="rounded border border-line-dim px-2 py-0.5 font-mono text-xs text-line"
+                    >
                       {s}
                     </span>
                   ))}
                 </div>
-                <p className="mt-5 max-w-3xl leading-7 text-ink/85">{b.summary}</p>
+                <p className="mt-5 max-w-3xl leading-7 text-ink/85">
+                  {b.summary}
+                </p>
                 <Bullets items={b.bullets} className="mt-5" />
                 {b.name.includes("Robotic Arm") && (
                   <div className="mt-6">
@@ -82,7 +95,10 @@ export function Builds() {
             <p className="mt-3 text-sm leading-6 text-muted">{r.description}</p>
             <div className="mt-4 flex flex-wrap items-center gap-2">
               {r.stack.map((s) => (
-                <span key={s} className="rounded border border-line-dim px-2 py-0.5 font-mono text-xs text-line">
+                <span
+                  key={s}
+                  className="rounded border border-line-dim px-2 py-0.5 font-mono text-xs text-line"
+                >
                   {s}
                 </span>
               ))}
